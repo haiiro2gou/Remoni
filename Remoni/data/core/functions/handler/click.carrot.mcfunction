@@ -4,7 +4,5 @@
 #
 # @within function core:tick/player/
 
-# asset_managerへの引継ぎ
-    tag @s add TriggerFlag.ClickCarrot
 # Reset
     scoreboard players reset @s ClickCarrotEvent
