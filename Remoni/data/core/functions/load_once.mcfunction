@@ -82,6 +82,14 @@
     #> Library用スコアボード
         scoreboard objectives add Lib dummy
 
+    #> PlayerManager - Motionチェック用スコアボード
+    # @within
+    #   function
+    #       player_manager:pos_fix_and_calc_diff
+    #       api:player_vector/get
+    #   predicate lib:is_player_moving
+        scoreboard objectives add PlayerStopTime dummy
+
     #> Library用スコアボード
     # @within * lib:**
         scoreboard objectives add ScoreToHPFluc dummy
