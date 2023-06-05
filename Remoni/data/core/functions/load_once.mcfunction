@@ -5,7 +5,7 @@
 # @within function core:load
 
 #> version設定
-    data modify storage global DataVersion set value "v0.0.0-alpha"
+    data modify storage global GameVersion set value "v0.0.0-alpha"
 
 #> forceload設定
 
