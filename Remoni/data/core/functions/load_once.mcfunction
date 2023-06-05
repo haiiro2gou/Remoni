@@ -90,6 +90,13 @@
     #   predicate lib:is_player_moving
         scoreboard objectives add PlayerStopTime dummy
 
+    #> WorldManager用スコアボード - ChunkLoadProtect
+    # @within
+    #   function
+    #       core:tick/player/pre
+    #   predicate api:is_completed_player_chunk_load_waiting_time
+        scoreboard objectives add ChunkLoadWaitingTime dummy
+
     #> Library用スコアボード
     # @within * lib:**
         scoreboard objectives add ScoreToHPFluc dummy
