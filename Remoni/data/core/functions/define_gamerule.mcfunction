@@ -1,6 +1,6 @@
 #> core:define_gamerule
 #
-# gameruleを定義します
+# ゲームルール設定
 #
 # @within function core:load_once
 
