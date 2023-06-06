@@ -1,6 +1,6 @@
 #> core:define_const
 #
-# 定数スコアボードの設定
+# 定数の定義
 #
 # @within function core:load_once
 

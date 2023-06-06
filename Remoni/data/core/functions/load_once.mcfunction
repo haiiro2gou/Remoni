@@ -7,15 +7,10 @@
 #> version設定
     data modify storage global GameVersion set value "v0.0.0-alpha"
 
-#> forceload設定
-
 #> gamerule設定
     function core:define_gamerule
 
-#> alias登録
-# @public
-
-#> デバッグ用storage設定
+#> debug用ストレージ
 # @public
     #declare tag InDev
     #declare storage global
@@ -26,84 +21,35 @@
     data modify storage global Prefix.CRIT set value "§4CRITICAL >> §r"
 
 #> リセット
+    kill 0-0-0-0-0
 
-#> 汎用エンティティの生成
+#> 管理用マーカー設定
+# @within *
+#   core:**
+    #alias entity commonEntity 0-0-0-0-0
     summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
 
-#> 汎用Teamの作成
+#> 当たり判定無効team
 # @public
     team add NoCollision
     team modify NoCollision collisionRule never
 
-#> スコアボード類の設定
-    #> 1tickスコアボード
-    # @global
+#> scoreboard類
+    #> 一時変数スコア
+    # @public
         scoreboard objectives add Temporary dummy
-
-    #> 共有スコアボード
-    # @global
+    #> 常時変数スコア
+    # @public
         scoreboard objectives add Global dummy
-
-    #> 初期乱数の生成
-    # @private
-        #declare tag Random
-        summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
-        execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
-        execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
-        kill @e[tag=Random,limit=1]
-
-    #> 定数用スコアボード
-    # @global
+    # 初期乱数生成
+        #> private
+        # @private
+            #declare tag Random
+            summon minecraft:area_effect_cloud ~ ~ ~ {Age:-2147483648,Duration:-1,WaitTime:-2147483648,Tags:["Random"]}
+            execute store result score $Random.Base Global run data get entity @e[tag=Random,limit=1] UUID[1]
+            execute store result score $Random.Carry Global run data get entity @e[tag=Random,limit=1] UUID[3]
+            kill @e[tag=Random,limit=1]
+    #> 定数スコア
+    # @public
         scoreboard objectives add Const dummy
         function core:define_const
-
-    #> IDの生成
-        scoreboard objectives add UserID dummy
-        scoreboard objectives add MobUUID dummy
-
-    #> Debug用スコアボード
-        scoreboard objectives add Debug dummy
-
-    #> イベントハンドラ用スコアボード
-    # @within function
-    #   core:load_once
-    #   core:handler/*
-    #   core:tick/**
-        scoreboard objectives add FirstJoinEvent custom:play_time
-        scoreboard objectives add RejoinEvent custom:leave_game
-        scoreboard objectives add AttackEvent custom:damage_dealt_absorbed
-        scoreboard objectives add DeathEvent deathCount
-        scoreboard objectives add RespawnEvent custom:time_since_death
-        scoreboard objectives add ClickCarrotEvent used:carrot_on_a_stick
-        scoreboard objectives add Sneak custom:sneak_time
-        scoreboard objectives add Elytra custom:aviate_one_cm
-        scoreboard objectives add DropEvent custom:drop
-
-    #> Library用スコアボード
-        scoreboard objectives add Lib dummy
-
-    #> PlayerManager - Motionチェック用スコアボード
-    # @within
-    #   function
-    #       player_manager:pos_fix_and_calc_diff
-    #       api:player_vector/get
-    #   predicate lib:is_player_moving
-        scoreboard objectives add PlayerStopTime dummy
-
-    #> WorldManager用スコアボード - ChunkLoadProtect
-    # @within
-    #   function
-    #       core:tick/player/pre
-    #   predicate api:is_completed_player_chunk_load_waiting_time
-        scoreboard objectives add ChunkLoadWaitingTime dummy
-
-    #> Library用スコアボード
-    # @within * lib:**
-        scoreboard objectives add ScoreToHPFluc dummy
-
-    #> 攻撃検知スコアボード
-    # @within function
-    #   core:tick/
-        scoreboard objectives add AttackingEntity dummy
-        scoreboard objectives add AttackedEntity dummy
-        
