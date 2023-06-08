@@ -22,7 +22,5 @@
     scoreboard players operation @s ScoreToHPFluc += $Fluctuation Lib
 # 攻撃情報を記録する
     execute if score $Fluctuation Lib matches ..-1 run function lib:score_to_health_wrapper/core/store_attack_info
-# ログ表示
-    execute at @s run function lib:status_log/show_health
 # リセット
     scoreboard players reset $Fluctuation Lib
