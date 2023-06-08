@@ -53,3 +53,6 @@
     # @public
         scoreboard objectives add Const dummy
         function core:define_const
+
+    #> motionチェック
+        scoreboard objectives add PlayerStopTime dummy
