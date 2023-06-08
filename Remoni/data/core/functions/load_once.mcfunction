@@ -54,5 +54,13 @@
         scoreboard objectives add Const dummy
         function core:define_const
 
+    #> library用
+    # @public
+        scoreboard objectives add Lib dummy
+    
+    #> library - private
+    # @within * lib:**
+        scoreboard objectives add ScoreToHPFluc dummy
+
     #> motionチェック
         scoreboard objectives add PlayerStopTime dummy
