@@ -22,9 +22,7 @@ data modify storage oh_my_dat: IDSet set value [I;]
 #   api:**
 #   debug:**
 #   core:**
-#   asset_manager:**
-#   player_manager:**
-#   world_manager:**
+#   entity:**
     #declare storage oh_my_dat:
     scoreboard objectives add OhMyDatID dummy
 #> 計算に使うスコアボード

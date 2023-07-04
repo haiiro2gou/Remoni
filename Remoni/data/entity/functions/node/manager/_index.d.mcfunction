@@ -1,21 +1,19 @@
-#> asset_manager:node/_index.d
+#> entity:node/manager/_index.d
 # @private
 
 #> storage
 # @within function
-#   asset:node/*/register/*
-#   asset:node/common/register/*
-#   asset_manager:node/**
-    #declare storage asset:node
+#   entity:node/asset/*/register/*
+#   entity:node/manager/register/*
+    #declare storage entity:node
 
 #> tag
 # @within *
-#   asset:node/*/register/
-#   asset_manager:node/**
+#   entity:node/**/register/*
 #   core:tick/
     #declare tag Node
 
 #> tag
 # @within function
-#   asset_manager:node/register/*
+#   entity:node/manager/register/*
     #declare tag NodeInit
