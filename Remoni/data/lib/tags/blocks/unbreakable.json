@@ -1,11 +1,12 @@
 {
     "values": [
-        "minecraft:barrier",
-        "minecraft:bedrock",
-        "minecraft:chain_command_block",
-        "minecraft:command_block",
-        "minecraft:jigsaw",
-        "minecraft:repeating_command_block",
-        "minecraft:structure_block"
+        "barrier",
+        "bedrock",
+        "chain_command_block",
+        "command_block",
+        "jigsaw",
+        "reinforced_deepslate",
+        "repeating_command_block",
+        "structure_block"
     ]
 }

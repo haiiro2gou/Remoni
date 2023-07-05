@@ -1,7 +1,7 @@
 {
-  "replace": false,
-  "values": [
-    "minecraft:zombie",
-    "minecraft:husk"
-  ]
+    "replace": false,
+    "values": [
+        "husk",
+        "zombie"
+    ]
 }

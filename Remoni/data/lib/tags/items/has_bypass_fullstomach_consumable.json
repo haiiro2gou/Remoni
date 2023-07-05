@@ -1,10 +1,10 @@
 {
     "values": [
-        "golden_apple",
-        "enchanted_golden_apple",
-        "honey_bottle",
-        "potion",
         "chorus_fruit",
-        "milk_bucket"
+        "enchanted_golden_apple",
+        "golden_apple",
+        "honey_bottle",
+        "milk_bucket",
+        "potion"
     ]
 }
