@@ -1,4 +1,4 @@
-#> mob_manager:_index.d
+#> entity:_index.d
 # @private
 
 #> General purpose Tag
