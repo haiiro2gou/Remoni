@@ -3,6 +3,6 @@
         "air",
         "cave_air",
         "light",
-        "void_light"
+        "void_air"
     ]
 }
