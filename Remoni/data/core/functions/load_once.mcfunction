@@ -54,6 +54,10 @@
         scoreboard objectives add Const dummy
         function core:define_const
 
+    #> UUID
+    # @public
+        scoreboard objectives add EntityUUID dummy
+
     #> library用
     # @public
         scoreboard objectives add Lib dummy
