@@ -5,7 +5,7 @@
 # @input
 #   as player
 #   storage api: Argument.Fluctuation: double
-#   storage api: Argument.Attacker?: int(MobUUID)
+#   storage api: Argument.Attacker?: int(EntityUUID)
 #   storage api: Argument.AttackType?: Enum(AttackType)
 #   storage api: Argument.ElementType?: Enum(ElementType)
 # @within function
