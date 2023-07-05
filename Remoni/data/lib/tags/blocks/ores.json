@@ -8,7 +8,7 @@
         "#emerald_ores",
         "#diamond_ores",
         "#redstone_ores",
-        "nether_quartz_ore",
-        "ancient_debris"
+        "ancient_debris",
+        "nether_quartz_ore"
     ]
 }

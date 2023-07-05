@@ -1,7 +1,7 @@
 {
     "values": [
+        "lingering_potion",
         "potion",
-        "splash_potion",
-        "lingering_potion"
+        "splash_potion"
     ]
 }
