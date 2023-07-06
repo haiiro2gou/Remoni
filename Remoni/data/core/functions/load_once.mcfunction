@@ -35,7 +35,7 @@
 #   core:**
 #   entity:**
 #   lib:**
-    #alias commonEntity 0-0-0-0-0
+    #alias entity commonEntity 0-0-0-0-0
     summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
 
 #> 当たり判定無効team
