@@ -7,6 +7,12 @@
 #> version設定
     data modify storage global GameVersion set value "v0.0.0-alpha"
 
+#> forceload chunks
+# origin
+    execute in overworld run forceload add -1 -1 0 0
+    execute in the_nether run forceload add -1 -1 0 0
+    execute in the_end run forceload add -1 -1 0 0
+
 #> gamerule設定
     function core:define_gamerule
 
@@ -25,8 +31,11 @@
 
 #> 管理用マーカー設定
 # @within *
+#   api:**
 #   core:**
-    #alias entity commonEntity 0-0-0-0-0
+#   entity:**
+#   lib:**
+    #alias commonEntity 0-0-0-0-0
     summon marker 0.0 0.0 0.0 {UUID:[I;0,0,0,0]}
 
 #> 当たり判定無効team
