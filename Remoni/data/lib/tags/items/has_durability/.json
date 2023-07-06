@@ -1,0 +1,17 @@
+{
+    "values": [
+        "#lib:has_durability/tool/",
+        "#lib:has_durability/armor/",
+        "bow",
+        "brush",
+        "carrot_on_a_stick",
+        "crossbow",
+        "elytra",
+        "fishing_rod",
+        "flint_and_steel",
+        "shears",
+        "shield",
+        "trident",
+        "warped_fungus_on_a_stick"
+    ]
+}

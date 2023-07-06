@@ -1,0 +1,12 @@
+{
+    "values": [
+        "barrier",
+        "bedrock",
+        "chain_command_block",
+        "command_block",
+        "jigsaw",
+        "reinforced_deepslate",
+        "repeating_command_block",
+        "structure_block"
+    ]
+}
