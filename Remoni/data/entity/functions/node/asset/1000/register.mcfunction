@@ -1,8 +1,8 @@
-#> entity:node/asset/1000.example_supplier/register
+#> entity:node/asset/1000/register
 #
 #
 #
-# @within function entity:node/asset/1000.example_supplier/
+# @within function entity:node/asset/1000/
 
 # ID (double)
     data modify storage entity:node ID set value 0.1
